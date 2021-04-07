@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Header from "./header";
 import SearchAnime from "./searchAnime";
 import Top10 from "./top10";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   
@@ -22,7 +24,7 @@ const App = () => {
   }
 
   const FetchAnime = async (query) => {
-    const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10&page=1`)
+    const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=9&page=1`)
     .then(res => res.json());
     SetAnimeList(temp.results);
   
@@ -37,13 +39,20 @@ const App = () => {
    
   return (
     <div>
-        <Top10 topAnime={topAnime} />
-        <SearchAnime 
-          HandleSearch={HandleSearch}
-          search={search}
-          SetSearch={SetSearch}
-          animeList={animeList}
-        />
+    <Header />
+    <div className="section">
+      <div className="inner">
+        <div className="row">
+          <Top10 topAnime={topAnime} />
+          <SearchAnime 
+            HandleSearch={HandleSearch}
+            search={search}
+            SetSearch={SetSearch}
+            animeList={animeList}
+          />
+        </div>
+      </div>    
+    </div>
     </div>
   )
 }

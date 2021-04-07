@@ -4,7 +4,7 @@ import AnimeCard from "./animecard";
 const SearchAnime = (props) => {
     return (
         
-    <div className="anime-container">    
+    <div className="anime-container col-lg-8 col-md-7 col-sm-6">    
         <div className="anime-form">
             <form
             onSubmit={props.HandleSearch}>

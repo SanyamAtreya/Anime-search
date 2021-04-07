@@ -1,74 +1,113 @@
+html{
+  font-size: 62.5%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 
 	font-family: 'Fira Sans', sans-serif;
-  background-color: powderblue;
+}
+
+.section {
+  background:url(https://images.hdqwalls.com/wallpapers/anime-ninja-4k-lo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center ;
+}
+
+.inner {
+  background:rgba(0, 0, 0, 0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center ;
 }
 
 .top-container{
-  float: left;
-  padding: 15px;
+  /* float: left; */
+  padding: 10rem 10rem 5rem;
 }
 
-@media screen and (max-width:600px) {
+.top-container h2 {
+  color: aliceblue;
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* @media screen and (max-width:600rem) {
   .top-container {
     width: 100%;
   }
+} */
+
+@media(max-width:998px) {
+  html {
+    font-size: 55%;
+  }
 }
 
-.top-container h3{
-  font-size: 100px;
+@media(max-width:768px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+
+.header h3{
+  font-size: 9rem;
   text-decoration: underline;
-  margin: 20px 20px 100px;
+  padding: 2rem 2rem rem;
+  color: blanchedalmond;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .top-container a{
   display: grid;
-  margin: 20px;
+  margin: 2rem;
   background-color: #313131;
-  font-size: x-large;
-  padding: 5px;
+  font-size: medium;
+  padding: 0.5rem;
   text-align: center;
   color: aliceblue;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .top-container a:hover{
   background-color: aliceblue;
   color: #313131;
+  transition-duration: 0.5s;
 }
 
 .anime-container{
   display: flex;
-  padding: 80px 100px;
+  padding: 11rem 5rem;
 }
 
-.anime-form{
-  width: 100%;
-}
 
 .search-box{
-  width: 600px;
-  height: 50px;
+  
+  width: 60rem;
+  height: 5rem;
   font-size: x-large;
   border-style: groove;
-  padding: 5px;
+  padding: 0.5rem;
   background-color: seashell;
+  margin-left: 5rem;
 } 
 
 .anime-list {
   float: right;
   display: flex;
   flex-wrap: wrap;
-  margin: 100px -750px 0px;
-  width: 600px;
+  margin: 10rem -60rem 0rem;
+  width: 60rem;
 }
 .anime-card {
     /* flex: 1 1 33.333%; */
     max-width: 33.333%;
-    padding: 16px 8px;
+    padding: 1.6rem 0.8rem;
     
 }
     
@@ -85,11 +124,11 @@
 .anime-card img {
         display: block;
         width: 100%;
-        height: 350px;
+        height: 35rem;
         object-fit: cover;
-        border-radius: 16px;
+        border-radius: 1.6rem;
         
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0rem 0rem 0rem rgba(0, 0, 0, 0.15);
         
         transition: 0.4s;
       
@@ -98,7 +137,7 @@
 .anime-card h3 {
       color: #313131;
       background-color: seashell;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       text-align: center;
 }
 
